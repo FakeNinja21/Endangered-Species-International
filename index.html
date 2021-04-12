@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Endangered Species</title>	
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style> body,h1,h2,h4,h5,h6 {font-family: "Raleway", sans-serif}
+h3 {
+  font-size: 30px;
+  font-family: "Raleway",sans-serif;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("birdy.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Endangered Species International</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">Our Misson</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Gallery</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Donate</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+      
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">GALLERY</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">DONATE</a>
+  
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small ">Endangered Species International</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium ">Endangered Species International</span><br>
+    <span class="w3-large">Donate To Endangered Species</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div> 
+
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">Our Mission</h3>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-paw w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Care</p>
+      <p>We help species who have the biggest chance of extinction</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Passion</p>
+      <p>We are determined to save all animals from extinction</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-map w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">International</p>
+      <p>Even though we are based in California, we save animals all around the world</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-money w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Species extinction and habitat destruction are one of the most urgent and biggest environmental problem confronting our societies. Together, let's create a world where species are no longer endangered.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Pictures Of Endagered Species</h3>
+      <p>These species are endangered but they can regain their population easily by your donations. Take your time and view the pic gallery of the endangered species.</p>
+      <p><a href="#team" class="w3-button w3-black"><i class="fa fa-th"> </i> Endager Species Gallery</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="end.jpg" width="900" height="400">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">1000</span>
+    <br>Axolotls Remaining in The World
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">-40% </span>
+    <br>Giraffe Population Over 30 Years
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">-95% </span>
+    <br> Lemur Population Over 10 Years
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">3900 </span>
+    <br>Tigers Remaining in The World
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">Endangered Species Gallery</h3>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="ape.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Ape">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="elephant.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" African Bush Elephant">
+    </div>
+     <div class="w3-col l3 m6">
+      <img src="giraffe1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Giraffe">
+    </div>
+   
+    
+    <div class="w3-col l3 m6">
+      <img src="orca.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Killer Whale">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="pandas.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Giant Panda">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="parrot.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Parrot">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="polar.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Polar Bear">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="tiger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Tiger">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- QR Section -->
+<div class="w3-container" style="padding:128px 16px" >
+  <h3 class="w3-center">QR Codes For Augmeneted Reality</h3>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="qr code for ape.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Scan this For Augmented Reality for Ape <br>https://go.echoar.xyz/wPjn">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="QR code for elephant.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Scan this For Augmented Reality for African Bush Elephant <br>https://go.echoar.xyz/TZa3" >
+    </div>
+     <div class="w3-col l3 m6">
+      <img src="Giraffe QR CODE.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Scan this For Augmented Reality for Giraffe <br>https://go.echoar.xyz/kD1n">
+    </div>
+   
+    
+    <div class="w3-col l3 m6">
+      <img src="QR code for killer whale.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Scan this For Augmented Reality for Killer Whale <br>https://go.echoar.xyz/RsuP">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="QR Panda.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Scan this For Augmented Reality for Giant Panda <br>https://go.echoar.xyz/jvcF">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="Parrot QR Code.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Scan this For Augmented Reality for Parrot (Look Up) <br>https://go.echoar.xyz/EQ66">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="Polar Bear QR Code.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Scan this For Augmented Reality for Polar Bear <br>https://go.echoar.xyz/Q1gs">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="Tiger QR Code.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Scan this For Augmented Reality for Tiger <br>https://go.echoar.xyz/qmXM">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px"id="pricing" >
+  <h3>PRICING</h3>
+  <p class="w3-large">These aren't the only choices, click donate now and choose how much you donate yourself.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16"><b>10 days of patrol in rainforest to protect gorillas in Congo</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 20</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="https://donate.justgiving.com/donation-amount?uri=aHR0cHM6Ly9kb25hdGUtYXBpLmp1c3RnaXZpbmcuY29tL2FwaS9kb25hdGlvbnMvM2E3MmY1ZTQxYzVmNGIyY2ExY2VkMTZmNDJkZDMyMzc="><button class="w3-button w3-black w3-padding-large">Donate Now</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
+        <li class="w3-padding-16"><b>1 hectare (2.5 acres) of coral reef protected against illegal finshing</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 50</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="https://donate.justgiving.com/donation-amount?uri=aHR0cHM6Ly9kb25hdGUtYXBpLmp1c3RnaXZpbmcuY29tL2FwaS9kb25hdGlvbnMvM2E3MmY1ZTQxYzVmNGIyY2ExY2VkMTZmNDJkZDMyMzc="><button class="w3-button w3-black w3-padding-large">Donate Now</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+        <li class="w3-padding-16"><b>0.5 hectare (1.25 acres) of critical rainforest habitat is saved</b></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 500</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="https://donate.justgiving.com/donation-amount?uri=aHR0cHM6Ly9kb25hdGUtYXBpLmp1c3RnaXZpbmcuY29tL2FwaS9kb25hdGlvbnMvM2E3MmY1ZTQxYzVmNGIyY2ExY2VkMTZmNDJkZDMyMzc="><button class="w3-button w3-black w3-padding-large">Donate Now</button></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+ <!-- form.123formbuilder.com script begins here --><script type="text/javascript" defer src="https://form.123formbuilder.com/embed/5875212.js" data-role="form" data-default-width="650px"></script><!-- form.123formbuilder.com script ends here -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+  
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+</div>
+</body>
+</html>
